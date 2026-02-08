@@ -16,7 +16,7 @@ def signup(request):
     else:
         if request.POST['password1'] == request.POST['password2']:
             try:
-                user=User.objects.create_user(
+                user = User.objects.create_user(
                         username=request.POST['username'],
                         password=request.POST['password1']
                 )
